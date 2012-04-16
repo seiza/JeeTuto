@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>me.couvreur.java.jeetuto</groupId>
+        <artifactId>JeeTuto</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <artifactId>jeetuto-ejb</artifactId>
+    <name>jeetuto-ejb</name>
+    <version>0.1</version>
+    <packaging>ejb</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>javaee</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.jbossas</groupId>
+            <artifactId>jboss-as-ejb3</artifactId>
+            <version>6.1.0.Final</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <ejbVersion>3.0</ejbVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

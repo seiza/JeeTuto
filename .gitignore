@@ -1,0 +1,17 @@
+# Maven files
+target
+
+# IntelliJ files
+# .idea/
+
+# Runtime files
+transaction.log
+
+# OS X folder attributes
+.DS_Store
+
+# Samples
+*~.nib
+*.mode1v3
+**/*.pbxuser
+Configurator.xcodeproj/project.pbxproj

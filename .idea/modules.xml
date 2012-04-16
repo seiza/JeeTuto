@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JeeTuto.iml" filepath="$PROJECT_DIR$/JeeTuto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeetuto-client/jeetuto-client.iml" filepath="$PROJECT_DIR$/jeetuto-client/jeetuto-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeetuto-ear/jeetuto-ear.iml" filepath="$PROJECT_DIR$/jeetuto-ear/jeetuto-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeetuto-ejb/jeetuto-ejb.iml" filepath="$PROJECT_DIR$/jeetuto-ejb/jeetuto-ejb.iml" />
+    </modules>
+  </component>
+</project>
+
