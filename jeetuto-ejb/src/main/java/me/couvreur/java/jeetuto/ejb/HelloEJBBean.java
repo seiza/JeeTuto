@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
  * Time: 16:56
  * To change this template use File | Settings | File Templates.
  */
-@Stateless
+@Stateless(mappedName = "ejb/HelloEJB")
 public class HelloEJBBean implements HelloEJB {
 
     public HelloEJBBean() {

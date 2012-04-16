@@ -18,7 +18,9 @@ public class ClientHelloEJB {
     public static void main(String[] args) {
         try {
             Context context = new InitialContext();
-            Object bean = context.lookup("jeetuto-ear-0.1/jeetuto-ejb-0.1.jar/HelloEJBBean!remote");
+
+            Object bean = context.lookup("ejb/HelloEJB"); // @see mappedName attribute of @Stateless annotation of HelloEJBBean class
+
             System.out.println("*** INFORMATION SUR LE BEAN OBTENU DU LOOKUP SUR LE CONTEXT (pour s'assurer de la bonne connexion : ***");
             System.out.println(bean.toString());
             System.out.println("*******************************************************************************************************");

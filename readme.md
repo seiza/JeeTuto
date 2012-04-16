@@ -1,6 +1,9 @@
 Projet tutorial visant à mettre en oeuvre les technologies Java EE.
 
 
+http://en.wikipedia.org/wiki/Markdown
+
+
 # Versions
 
 ## Release 0.1
@@ -34,7 +37,6 @@ Fonctionnement :
 Attention :
 
 * Il va peut être falloir changer le port JNDI dans le fichier `jeetuto-swing/src/main/resources/jndi.properties` pour que cela fonctionne.
-* Le lookup dans la classe client `ClientHelloEJB` contient le numéro de version du projet !
 
 
 # Configurations de l'environnement
