@@ -19,11 +19,15 @@ Il n'y a pas encore de JMS / MDB, de persistence ou d'application web.
 
 L'environnement technique de la 0.1 est :
 
-* JBoss AS 6 (j'ai initialement commencé avec JBoss AS 7, mais trop de limitations et de bugs pour débuter)
-* Maven 3 (voir )
+* JBoss AS 6
+    * J'ai initialement commencé avec JBoss AS 7, mais trop de limitations et de bugs pour débuter
+    * Voir [Installer JBoss AS 7 sur Mac](http://www.agora.2ia.net/mediawiki/index.php?title=JBossPLP#JBoss_7_AS_Sous_MAC_OS_X) (la procédure reste la même que pour la v6).
+* Maven 3 
+    * Voir [Installer Maven3 sur Mac](http://www.agora.2ia.net/mediawiki/index.php?title=Maven3#Mac_OS_X)
+    * Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
 * IntelliJ 11 :
-** [Use Maven in Intellij IDEA](https://wiki.openmrs.org/display/docs/Use+Maven+In+Intellij+IDEA)
-** [Maven IDEA Plugin](http://maven.apache.org/plugins/maven-idea-plugin/index.html)
+    * [Use Maven in Intellij IDEA](https://wiki.openmrs.org/display/docs/Use+Maven+In+Intellij+IDEA)
+    * [Maven IDEA Plugin](http://maven.apache.org/plugins/maven-idea-plugin/index.html)
 
 Voir aussi [la page JavaEE sur mon wiki](http://www.agora.2ia.net/mediawiki/index.php?title=JavaEE) pour les détails d'installation.
 
