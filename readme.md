@@ -1,10 +1,14 @@
 Projet tutorial visant à mettre en oeuvre les technologies Java EE.
 
-
 http://en.wikipedia.org/wiki/Markdown
 
 
 # Versions
+
+Versions (tags GitHub) :
+
+* `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
+
 
 ## Release 0.1
 
