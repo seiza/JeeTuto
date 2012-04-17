@@ -8,6 +8,8 @@ http://en.wikipedia.org/wiki/Markdown
 
 ## Release 0.1
 
+### Contenu
+
 Le minimum pour mettre en oeuvre un EJB :
 
 * Un EJB session stateless (qui prend un paramètre String retourne une String concaténée)
@@ -17,33 +19,44 @@ Le minimum pour mettre en oeuvre un EJB :
 Il n'y a pas encore de JMS / MDB, de persistence ou d'application web.
 
 
-L'environnement technique de la 0.1 est :
+### Environnement technique
 
 * JBoss AS 6
     * J'ai initialement commencé avec JBoss AS 7, mais trop de limitations et de bugs pour débuter
     * Voir [Installer JBoss AS 7 sur Mac](http://www.agora.2ia.net/mediawiki/index.php?title=JBossPLP#JBoss_7_AS_Sous_MAC_OS_X) (la procédure reste la même que pour la v6).
 * Maven 3 
     * Voir [Installer Maven3 sur Mac](http://www.agora.2ia.net/mediawiki/index.php?title=Maven3#Mac_OS_X)
-    * Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
 * IntelliJ 11 :
     * [Use Maven in Intellij IDEA](https://wiki.openmrs.org/display/docs/Use+Maven+In+Intellij+IDEA)
     * [Maven IDEA Plugin](http://maven.apache.org/plugins/maven-idea-plugin/index.html)
 
-Voir aussi [la page JavaEE sur mon wiki](http://www.agora.2ia.net/mediawiki/index.php?title=JavaEE) pour les détails d'installation.
+Voir aussi :
+
+* Le paragraphe "Ecrire le projet 'from scratch'" pour plus de détails
+* [la page JavaEE sur mon wiki](http://www.agora.2ia.net/mediawiki/index.php?title=JavaEE) pour les détails d'installation.
 
 
-Fonctionnement :
+### Configurations de l'environnement
+
+* Récupérer les sources : Faire un `git clone git@github.com:seiza/JeeTuto.git`
+* Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
+* Dans IntelliJ (ou votre IDE favoris) ajouter au module jeetuto-client la librairie `/usr/local/jboss-6.1.0.Final/client/jbossall-client.jar`
+
+
+### Construction du projet
 
 * Depuis une console, lancer la commande `mvn package` pour construire les artefacts
 * Déployer le EAR de `jeetuto/target/jeetuto-ear-1.0.ear` dans le conteneur EJB (JBoss 6, répertoire)
 * Exécuter la classe `me.couvreur.java.jeetuto.client.ClientHelloEJB` du module `jeetuto-client` : vous devrier voir une trace interessante ;)
+
 
 Attention :
 
 * Il va peut être falloir changer le port JNDI dans le fichier `jeetuto-swing/src/main/resources/jndi.properties` pour que cela fonctionne.
 
 
-# Configurations de l'environnement
+
+# Ecrire le projet "from scratch"
 
 ## Module racine dans Maven
 
@@ -137,10 +150,17 @@ Ajouter dans le settings.xml :
 
 Voir : Capture d’écran 2012-04-15 à 14.18.07.png
 
-Project Settings > Modules > module-name > Dependencies > Module SDk : 1.6
+Créer le SDK dans IntelliJ : `Project Settings > SDKs > [+]`
+
+Puis le selectionner : `Project Settings > Modules > module-name > Dependencies > Module SDk : 1.6`
+
 
 
 ## Erreur lors du lookup côté client :
 
-Si vous avez l'erreur : `Exception in thread "main" java.lang.ClassCastException: javax.naming.Reference cannot be cast to me.couvreur.java.jeetuto.ejb.HelloEJB`
+Si vous avez l'erreur :
+
+    Exception in thread "main" java.lang.ClassCastException: javax.naming.Reference cannot be cast to
+    me.couvreur.java.jeetuto.ejb.HelloEJB
+
 Alors il faut ajouter la librairie `jbossall-client.jar` (qui se trouve dans `JBOSS_HOME/client`) au projet IntelliJ `jeetuto-client`.

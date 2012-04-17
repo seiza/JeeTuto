@@ -28,7 +28,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javassist:javassist:3.12.0.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.classpool:jboss-classpool-scoped:1.0.0.Alpha6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.classpool:jboss-classpool:1.0.0.Alpha6" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss:jboss-common-core:2.2.17.GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jboss-common-core:2.2.17.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jboss-reflect:2.2.0.Alpha5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jboss-mdr:2.2.0.SP1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: qdox:qdox:1.6.1" level="project" />
@@ -50,7 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.ejb3.sis:jboss-ejb3-sis:1.0.0-alpha-1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jboss-vfs:3.0.1.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jbossxb:2.0.3.GA" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-spi:2.0.5.GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.logging:jboss-logging-spi:2.0.5.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: xerces:xercesImpl:2.9.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.wutka:dtdparser:1.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
@@ -146,7 +146,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-server:6.1.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-deployment:6.1.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.security:jbosssx-client:2.0.2.Beta5" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.naming:jnp-client:5.0.5.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.naming:jnp-client:5.0.5.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-security:6.1.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-system-jmx:6.1.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-main:6.1.0.Final" level="project" />
