@@ -38,6 +38,21 @@
                         </modules>
                     </configuration>
                 </plugin>
+
+            <!--            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jboss-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+
+                    <jbossHome>/opt/jboss6/server/default/deploy</jbossHome>
+
+                    <jbossHome>/home/varsha/Downloads/jboss-6.0.0.Final/</jbossHome>
+                    <serverName>default</serverName>
+                    <fileName>target/MessageBean.jar</fileName>
+                    <path>/UltimateSMS</path>
+                </configuration>
+            </plugin>-->
         </plugins>
     </build>
 

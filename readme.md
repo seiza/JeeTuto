@@ -8,6 +8,18 @@ http://en.wikipedia.org/wiki/Markdown
 Versions (tags GitHub) :
 
 * `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
+* `jeetuto-0.2` : Ajout d'un Message Driven Bean.
+
+
+## Release 0.2
+
+### Contenu
+
+Ajout d'un Message Driven Bean (MDB / JMS).
+
+Dans le package `me.couvreur.java.jeetuto.ejb.mdb` et les classes `*EjjloMDB*`.
+
+
 
 
 ## Release 0.1
