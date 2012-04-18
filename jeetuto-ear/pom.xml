@@ -5,13 +5,13 @@
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.3</version>
+        <version>0.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>jeetuto-ear</artifactId>
     <name>jeetuto-ear</name>
     <packaging>ear</packaging>
-    <version>0.3</version>
+    <version>0.4-SNAPSHOT</version>
 
     <dependencies>
         <dependency>

@@ -6,14 +6,14 @@
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.3</version>
+        <version>0.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>jeetuto-model</artifactId>
     <name>jeetuto-model</name>
     <packaging>jar</packaging>
     <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
-    <version>0.3</version>
+    <version>0.4-SNAPSHOT</version>
 
     <repositories>
         <repository>
