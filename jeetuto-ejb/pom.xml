@@ -5,14 +5,14 @@
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.2</version>
+        <version>0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>jeetuto-ejb</artifactId>
     <name>jeetuto-ejb</name>
     <packaging>ejb</packaging>
     <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
-    <version>0.2</version>
+    <version>0.3-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
