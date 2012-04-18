@@ -327,6 +327,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: ws-commons:policy:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.woodstox:wstx-lgpl:3.2.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: wsdl4j:wsdl4j:1.6.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: xfire:xfire-jsr181-api:1.0-M1" level="project" />
   </component>
 </module>
 

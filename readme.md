@@ -2,7 +2,7 @@ Projet tutorial visant à mettre en oeuvre les technologies Java EE.
 
 http://en.wikipedia.org/wiki/Markdown
 
-Utilisation :
+# Utilisation
 
 * Obtenir les sources depuis un terminal : `git clone https://github.com/seiza/JeeTuto.git`
 * Lancer IntelliJ (http://www.jetbrains.com/idea/download/index.html), faire "Ouvrir un projet" et sélectionner le `pom.xml` racine
@@ -11,7 +11,7 @@ Utilisation :
 * Dans IntelliJ ajouter la librairie `/usr/local/jboss-6.1.0.Final/client/jbossall-client.jar` au module `jeetuto-client`
     * Puis exécuter les classes client `ClientHelloSessionStateless` (trace dans la console IntelliJ) ou `ClientHelloJMSProducer` (trace dans la console de JBoss)
 
-Pour créer une nouvelle version : `mvn release:prepare`
+Pour créer une nouvelle version : `mvn release:prepare` (après avoir supprimé le fichier `release.properties`).
 
 
 
@@ -22,6 +22,61 @@ Versions (tags GitHub) :
 * `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
 * `JeeTuto-0.2` : Ajout d'un Message Driven Bean.
 * `JeeTuto-0.3` : Ajout d'un Entity Bean (JPA / Hibernate).
+* `JeeTuto-0.4` : Ajout d'un WebService (via un EJB Stateless)
+
+
+## Release 0.4
+
+### Contenu
+
+Ajout du WebService `AdditionWebService` sous la forme d'un EJB Session Stateless (voir "Remarques").
+
+Une fois déployé, ce Web Service retourne une String qui est la concaténation des deux paramètres String passés en paramètre.
+
+
+
+### Remarques
+
+Il y a deux moyens d’implémenter un service web :
+
+* Le premier repose sur les servlets où une simple classe annotée est déployée dans un conteneur web (dans un WAR). 
+* L’autre moyen repose sur les EJB sans état qui sont annotés à la fois par @Stateless et @WebSevice, puis déployés dans un conteneur EJB (dans un .jar ou .ear).
+
+Dans ce tutoriel c'est évidemment la seconde option qui a été choisie (via EJB Stateless).
+
+La création du WebService consiste en seulement 3 étapes :
+
+* Créer l'interface `AdditionWebService` (avec les annotations `@Remote` et surtout `@WebService`)
+* Créer le Stateless Bean `AdditionWebServiceBean` qui l'implémente (avec les annotations `@Stateless` et surtout `@WebService`)
+* Ajouter la configuration Maven (la dépendance `xfire:xfire-jsr181-api`)
+* Et déployer !
+
+Pour information, dans le cas d'un Web Service via servlet / war, l'interface est inutile : il y a uniquement la classe annotée.
+
+Le subtilité, pour ne pas dire difficulté, réside dans l'obtention du nom du Web Service (afin de pouvoir l'appeler). En fait, quand vous déployer l'EJB (l'EAR) dans JBoss, vous voyez apparaitre la trace suivante :
+
+    id=AdditionWebServiceBean
+    address=http://localhost:8080/jeetuto-ejb-0.4-SNAPSHOT/AdditionWebService/AdditionWebServiceBean
+    implementor=me.couvreur.java.jeetuto.ejb.ws.AdditionWebServiceBean
+    invoker=org.jboss.wsf.stack.cxf.InvokerEJB3
+    serviceName={http://ws.ejb.jeetuto.java.couvreur.me/}AdditionWebService
+    portName={http://ws.ejb.jeetuto.java.couvreur.me/}AdditionWebServiceBeanPort
+    wsdlLocation=null
+    mtomEnabled=false
+
+Cette trace vous donne à la fois :
+
+* Le nom du Web Service : `AdditionWebServiceBean`
+* Mais aussi et surtout l'URL par laquelle y accéder : `http://localhost:8080/jeetuto-ejb-0.4-SNAPSHOT/AdditionWebService/AdditionWebServiceBean`
+
+Une fois le Web Service déployé, voici quelques pistes pour le tester :
+
+* [SoapUI](http://www.soapui.org/)
+* [Plugin Maven pour générer un client](http://blog.vinodsingh.com/2010/04/jax-ws-web-service-with-maven.html)
+* [Les tests unitaires](http://magnus-k-karlsson.blogspot.com/2010/02/getting-started-with-jboss-web-serivce.html)
+
+Quant à la prochaine étape de ce tutoriel, il s'agira probablement de se pencher sur les [Web Services RESTful en Java](http://bigdatanerd.wordpress.com/2012/01/19/restful-web-services-in-java-with-jboss-resteasy-maven-and-best-practices/)
+
 
 
 ## Release 0.3
