@@ -2,13 +2,39 @@ Projet tutorial visant à mettre en oeuvre les technologies Java EE.
 
 http://en.wikipedia.org/wiki/Markdown
 
+Utilisation :
+
+* Obtenir les sources depuis un terminal : `git clone https://github.com/seiza/JeeTuto.git`
+* Lancer IntelliJ (http://www.jetbrains.com/idea/download/index.html), faire "Ouvrir un projet" et sélectionner le `pom.xml` racine
+* Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
+* Dans IntelliJ ajouter la librairie `/usr/local/jboss-6.1.0.Final/client/jbossall-client.jar` au module `jeetuto-client`
+
+Pour créer une nouvelle version : `mvn release:prepare`
+
+
 
 # Versions
 
 Versions (tags GitHub) :
 
 * `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
-* `jeetuto-0.2` : Ajout d'un Message Driven Bean.
+* `JeeTuto-0.2` : Ajout d'un Message Driven Bean.
+
+
+## Release 0.3
+
+### Contenu
+
+Ajout de la persistance (JPA / Hibernate) :
+
+* Dans le package `me.couvreur.java.jeetuto.ejb.jpa`.
+
+
+
+### Remarques
+
+...
+
 
 
 ## Release 0.2
@@ -20,7 +46,7 @@ Ajout d'un Message Driven Bean (MDB / JMS) :
 * Dans le package `me.couvreur.java.jeetuto.ejb.mdb`.
 * Le Message Producer et le MDB fonctionnent avec une Queue.
 * Mais impossible de faire fonctionner le Messager/Queue Receiver ;(
-
+* Mise en place de la livraison via Maven : `mvn mvn release:prepare` et 3 fois 'return' (utiliser les 3 propositions par défaut)
 
 
 ### Remarques

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ejb" name="jeetuto-ejb:ejb exploded">
-    <output-path>$PROJECT_DIR$/jeetuto-ejb/target/jeetuto-ejb-0.2</output-path>
+    <output-path>$PROJECT_DIR$/jeetuto-ejb/target/jeetuto-ejb-0.3-SNAPSHOT</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="jeetuto-ejb/ejb/EJB" />
       <element id="module-output" name="jeetuto-ejb" />

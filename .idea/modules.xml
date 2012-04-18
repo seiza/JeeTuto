@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/jeetuto-client/jeetuto-client.iml" filepath="$PROJECT_DIR$/jeetuto-client/jeetuto-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeetuto-ear/jeetuto-ear.iml" filepath="$PROJECT_DIR$/jeetuto-ear/jeetuto-ear.iml" />
       <module fileurl="file://$PROJECT_DIR$/jeetuto-ejb/jeetuto-ejb.iml" filepath="$PROJECT_DIR$/jeetuto-ejb/jeetuto-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeetuto-model/jeetuto-model.iml" filepath="$PROJECT_DIR$/jeetuto-model/jeetuto-model.iml" />
     </modules>
   </component>
 </project>

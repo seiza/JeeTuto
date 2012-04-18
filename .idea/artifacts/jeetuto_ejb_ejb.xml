@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="ejb-jar" name="jeetuto-ejb:ejb">
     <output-path>$PROJECT_DIR$/jeetuto-ejb/target</output-path>
-    <root id="archive" name="jeetuto-ejb-0.2.jar">
+    <root id="archive" name="jeetuto-ejb-0.3-SNAPSHOT.jar">
       <element id="artifact" artifact-name="jeetuto-ejb:ejb exploded" />
     </root>
   </artifact>

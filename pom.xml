@@ -11,6 +11,7 @@
     <url>https://github.com/seiza/JeeTuto</url>
 
     <modules>
+        <module>jeetuto-model</module>
         <module>jeetuto-ejb</module>
         <module>jeetuto-ear</module>
         <module>jeetuto-client</module>
