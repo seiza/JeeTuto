@@ -12,7 +12,7 @@
 
     <artifactId>jeetuto-ejb</artifactId>
     <name>jeetuto-ejb</name>
-    <version>${parent.version}</version>
+    <version>${project.parent.version}</version>
     <packaging>ejb</packaging>
 
     <dependencies>

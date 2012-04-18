@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>jeetuto-ear</artifactId>
-    <version>${parent.version}</version>
+    <version>${project.parent.version}</version>
     <name>jeetuto-ear</name>
     <packaging>ear</packaging>
 
