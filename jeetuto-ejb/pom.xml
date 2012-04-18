@@ -12,8 +12,9 @@
 
     <artifactId>jeetuto-ejb</artifactId>
     <name>jeetuto-ejb</name>
-    <version>${project.parent.version}</version>
     <packaging>ejb</packaging>
+    <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
+    <version>${project.parent.version}</version>
 
     <dependencies>
         <dependency>

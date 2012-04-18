@@ -11,9 +11,10 @@
     </parent>
 
     <artifactId>jeetuto-ear</artifactId>
-    <version>${project.parent.version}</version>
     <name>jeetuto-ear</name>
     <packaging>ear</packaging>
+    <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
+    <version>${project.parent.version}</version>
 
     <dependencies>
         <dependency>

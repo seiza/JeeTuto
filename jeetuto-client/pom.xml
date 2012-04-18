@@ -11,9 +11,10 @@
     </parent>
 
     <artifactId>jeetuto-client</artifactId>
-    <version>${project.parent.version}</version>
     <name>jeetuto-client</name>
     <packaging>jar</packaging>
+    <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
+    <version>${project.parent.version}</version>
 
     <!-- http://repo.maven.apache.org/maven2/org/jboss/jbossas/jboss-as-client/ -->
     <dependencies>

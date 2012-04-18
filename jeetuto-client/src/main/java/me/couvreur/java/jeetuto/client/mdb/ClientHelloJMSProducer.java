@@ -12,7 +12,7 @@ import javax.naming.NamingException;
  * Date: 17/04/12
  * Time: 12:00
  */
-public class ClientHelloMDBSender {
+public class ClientHelloJMSProducer {
 
     public static void main(String[] args) {
         try {

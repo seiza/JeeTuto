@@ -16,8 +16,10 @@ Versions (tags GitHub) :
 ### Contenu
 
 Ajout d'un Message Driven Bean (MDB / JMS).
+* Dans le package `me.couvreur.java.jeetuto.ejb.mdb`.
+* Le Message Producer et le MDB fonctionnent avec une Queue.
+* Mais impossible de faire fonctionner le Messager/Queue Receiver ;(
 
-Dans le package `me.couvreur.java.jeetuto.ejb.mdb` et les classes `*HelloMDB*`.
 
 
 ### Remarques
@@ -38,7 +40,7 @@ Le minimum pour mettre en oeuvre un EJB :
 * Un EAR encapsulant l'EJB à des fins de déploiement
 * Un client qui se contente d'appeler l'EJB, de l'appeler et de logger le résultat (aucune autre technologie)
 
-Il n'y a pas encore de JMS / MDB, de persistence ou d'application web.
+Il n'y a pas encore de JMS / MDB, de persistance ou d'application web.
 
 
 ### Environnement technique
