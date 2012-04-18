@@ -19,6 +19,24 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="jeetuto-ejb" />
+    <orderEntry type="module" module-name="jeetuto-model" />
+    <orderEntry type="library" name="Maven: hsqldb:hsqldb:1.8.0.7" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:3.2.0.ga" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-annotations:3.2.0.ga" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate:3.2.0.ga" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:1.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:jta:1.0.1B" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-attrs:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.1_3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: jboss:javassist:3.3.ga" level="project" />
+    <orderEntry type="library" name="Maven: jboss:jboss-archive-browsing:5.0.0alpha-200607201-119" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.7" level="project" />
   </component>
 </module>

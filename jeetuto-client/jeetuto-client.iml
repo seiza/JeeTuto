@@ -35,18 +35,18 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: trove:trove:1.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: log4j:log4j:1.2.14" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-ejb3:client:6.1.0.Final" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: cglib:cglib:2.1_3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: asm:asm:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.1_3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:1.5.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-core:3.6.6.Final" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: antlr:antlr:2.7.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-collections:commons-collections:3.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.5.6" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jacorb:jacorb:2.3.1jboss.patch01-brew" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.logging:jboss-logging:3.0.0.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.remoting:jboss-remoting:2.5.4.SP2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-entitymanager:3.6.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:3.6.6.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.ejb3.sis:jboss-ejb3-sis:1.0.0-alpha-1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jboss-vfs:3.0.1.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss:jbossxb:2.0.3.GA" level="project" />
@@ -199,8 +199,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: i18nlog:i18nlog:1.0.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.cluster:jboss-ha-server-core:1.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.ejb3:jboss-ejb3-core:client:1.7.21" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate-annotations:3.3.1.GA" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-logging:commons-logging:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-annotations:3.3.1.GA" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.microcontainer:jboss-kernel:2.0.0.CR5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.microcontainer:jboss-aop-mc-int:2.0.8.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.ejb3.vfs:jboss-ejb3-vfs-impl-vfs3:1.0.0-alpha-1" level="project" />
@@ -340,6 +340,15 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-system-jmx:client:6.1.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.jbossas:jboss-as-server:jmx-invoker-adaptor-client:6.1.0.Final" level="project" />
     <orderEntry type="module" module-name="jeetuto-ejb" />
+    <orderEntry type="module" module-name="jeetuto-model" />
+    <orderEntry type="library" name="Maven: hsqldb:hsqldb:1.8.0.7" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate:3.2.0.ga" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:1.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:jta:1.0.1B" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-attrs:1.5.3" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: jboss:javassist:3.3.ga" level="project" />
+    <orderEntry type="library" name="Maven: jboss:jboss-archive-browsing:5.0.0alpha-200607201-119" level="project" />
   </component>
 </module>
 

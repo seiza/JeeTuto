@@ -1,6 +1,7 @@
 package me.couvreur.java.jeetuto.ejb.entity.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * User: jacques
@@ -9,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="ADDRESS")
-public class Address {
+public class Address implements Serializable {
 
     @Id
     @GeneratedValue

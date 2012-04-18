@@ -7,7 +7,9 @@ Utilisation :
 * Obtenir les sources depuis un terminal : `git clone https://github.com/seiza/JeeTuto.git`
 * Lancer IntelliJ (http://www.jetbrains.com/idea/download/index.html), faire "Ouvrir un projet" et sélectionner le `pom.xml` racine
 * Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
+    * Exécuter `mvn clean package` dans un terminal puis déployer l'EAR dans JBoss
 * Dans IntelliJ ajouter la librairie `/usr/local/jboss-6.1.0.Final/client/jbossall-client.jar` au module `jeetuto-client`
+    * Puis exécuter les classes client `ClientHelloSessionStateless` (trace dans la console IntelliJ) ou `ClientHelloJMSProducer` (trace dans la console de JBoss)
 
 Pour créer une nouvelle version : `mvn release:prepare`
 
@@ -27,15 +29,18 @@ Versions (tags GitHub) :
 
 Ajout de la persistance (JPA / Hibernate) :
 
-* Dans le package `me.couvreur.java.jeetuto.ejb.entity`.
-* Tests unitaires (PersonTest et AddressTest)
-* Relation OntToMany de `Person` vers `Address` (voir l'annotation au dessus de la méthode `Person.getAdresses()` pour la configuration clef)
+* Entity Beans `Person` vers `Address` dans le module `jeetuto-model` pour isoler le modèle et la persistance (plus facile pour tester).
+    * Dans le package `me.couvreur.java.jeetuto.ejb.entity.model`.
+* Tests unitaires (`PersonTest` et `AddressTest`) :
+    * Voir http://ejb3unit.sourceforge.net/Session-Bean.html
+* Relation OneToMany de `Person` vers `Address` (voir l'annotation au dessus de la méthode `Person.getAdresses()` pour la configuration clef).
+* L'EJB Session Stateless `AddressBookBean` a été créé pour pouvoir accéder aux Entity Beans, mais il n'est terminé car aucune base n'est installée / configurée.
 
 
 
 ### Remarques
 
-...
+* `Person` et `Address` (les objets persistés) doivent implémenter `Serializable`.
 
 
 

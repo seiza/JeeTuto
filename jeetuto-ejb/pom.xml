@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>me.couvreur.java.jeetuto</groupId>
+            <artifactId>jeetuto-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>javaee</groupId>
             <artifactId>javaee-api</artifactId>
             <version>5</version>

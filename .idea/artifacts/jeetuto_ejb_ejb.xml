@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$/jeetuto-ejb/target</output-path>
     <root id="archive" name="jeetuto-ejb-0.3-SNAPSHOT.jar">
       <element id="artifact" artifact-name="jeetuto-ejb:ejb exploded" />
+      <element id="archive" name="jeetuto-model-0.3-SNAPSHOT.jar">
+        <element id="module-output" name="jeetuto-model" />
+      </element>
     </root>
   </artifact>
 </component>
