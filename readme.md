@@ -69,7 +69,7 @@ Voir aussi :
 
 * Depuis une console, lancer la commande `mvn package` pour construire les artefacts
 * Déployer le EAR de `jeetuto/target/jeetuto-ear-1.0.ear` dans le conteneur EJB (JBoss 6, répertoire)
-* Exécuter la classe `me.couvreur.java.jeetuto.client.ClientHelloEJB` du module `jeetuto-client` : vous devrier voir une trace interessante ;)
+* Exécuter la classe `me.couvreur.java.jeetuto.client.session.ClientHelloSessionStateless` du module `jeetuto-client` : vous devrier voir une trace interessante ;)
 
 
 Attention :
@@ -183,6 +183,6 @@ Puis le selectionner : `Project Settings > Modules > module-name > Dependencies 
 Si vous avez l'erreur :
 
     Exception in thread "main" java.lang.ClassCastException: javax.naming.Reference cannot be cast to
-    me.couvreur.java.jeetuto.ejb.HelloEJB
+    me.couvreur.java.jeetuto.ejb.session.HelloSession
 
 Alors il faut ajouter la librairie `jbossall-client.jar` (qui se trouve dans `JBOSS_HOME/client`) au projet IntelliJ `jeetuto-client`.
