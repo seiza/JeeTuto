@@ -19,8 +19,24 @@ import static org.junit.Assert.assertNotNull;
 public class PersonTest {
 
     @Test
+    public void addAddressTest() {
+        String jacques = "Jacques";
+        String geneva = "Geneva";
+
+        Person person = new Person();
+        person.setName(jacques);
+        person.addAddress(new Address(geneva));
+
+        assertEquals(jacques, person.getName());
+        assertEquals(1, person.getAdresses().size());
+        assertEquals(geneva, person.getAdresses().iterator().next().getCity());
+    }
+
+    @Test
     public void findPersonWithNameTest() {
         String jacques = "Jacques";
+        String geneva = "Geneva";
+
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MaBaseDeTestPU");
         EntityManager manager = factory.createEntityManager();
         EntityTransaction transaction = manager.getTransaction();
@@ -29,6 +45,7 @@ public class PersonTest {
         {
             Person person = new Person();
             person.setName(jacques);
+            person.addAddress(new Address(geneva));
             manager.persist(person);
         }
         manager.flush();
@@ -38,6 +55,9 @@ public class PersonTest {
             Person person = manager.find(Person.class, 1);
             assertNotNull(person);
             assertEquals(jacques, person.getName());
+
+            assertEquals(1, person.getAdresses().size());
+            assertEquals(geneva, person.getAdresses().iterator().next().getCity());
         }
         manager.close();
         factory.close();

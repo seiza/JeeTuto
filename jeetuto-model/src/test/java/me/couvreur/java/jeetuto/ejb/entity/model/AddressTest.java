@@ -18,6 +18,22 @@ import static org.junit.Assert.assertNotNull;
 public class AddressTest {
 
     @Test
+    public void constructorsTest() {
+        String geneva = "Geneva";
+        {
+            Address address = new Address();
+            assertEquals("", address.getCity());
+
+            address.setCity(geneva);
+            assertEquals(geneva, address.getCity());
+        }
+        {
+            assertEquals("", new Address("").getCity());
+            assertEquals(geneva, new Address(geneva).getCity());
+        }
+    }
+
+    @Test
     public void findAddressWithCityTest() {
         String geneva = "Geneva";
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MaBaseDeTestPU");

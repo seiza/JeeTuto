@@ -27,7 +27,9 @@ Versions (tags GitHub) :
 
 Ajout de la persistance (JPA / Hibernate) :
 
-* Dans le package `me.couvreur.java.jeetuto.ejb.jpa`.
+* Dans le package `me.couvreur.java.jeetuto.ejb.entity`.
+* Tests unitaires (PersonTest et AddressTest)
+* Relation OntToMany de `Person` vers `Address` (voir l'annotation au dessus de la méthode `Person.getAdresses()` pour la configuration clef)
 
 
 

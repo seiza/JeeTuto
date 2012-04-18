@@ -18,6 +18,14 @@ public class Address {
     @Column(name = "CITY")
     private String city;
 
+    public Address() {
+        this("");
+    }
+
+    public Address(String city) {
+        this.city = city;
+    }
+
     public String getCity() {
         return city;
     }
