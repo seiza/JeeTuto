@@ -7,7 +7,7 @@ Utilisation :
 * Obtenir les sources depuis un terminal : `git clone https://github.com/seiza/JeeTuto.git`
 * Lancer IntelliJ (http://www.jetbrains.com/idea/download/index.html), faire "Ouvrir un projet" et sélectionner le `pom.xml` racine
 * Copier le fichier `settings.xml` (à la racine de ce projet) dans votre répertoire `~/.m2`
-    * Exécuter `mvn clean package` dans un terminal puis déployer l'EAR dans JBoss
+    * Exécuter `mvn clean package` dans un terminal (copie l'EAR dans le répertoire `/usr/local/jboss-6.1.0.Final/server/default/deploy/` si il existe !)
 * Dans IntelliJ ajouter la librairie `/usr/local/jboss-6.1.0.Final/client/jbossall-client.jar` au module `jeetuto-client`
     * Puis exécuter les classes client `ClientHelloSessionStateless` (trace dans la console IntelliJ) ou `ClientHelloJMSProducer` (trace dans la console de JBoss)
 
@@ -21,6 +21,7 @@ Versions (tags GitHub) :
 
 * `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
 * `JeeTuto-0.2` : Ajout d'un Message Driven Bean.
+* `JeeTuto-0.3` : Ajout d'un Entity Bean (JPA / Hibernate).
 
 
 ## Release 0.3
@@ -35,12 +36,14 @@ Ajout de la persistance (JPA / Hibernate) :
     * Voir http://ejb3unit.sourceforge.net/Session-Bean.html
 * Relation OneToMany de `Person` vers `Address` (voir l'annotation au dessus de la méthode `Person.getAdresses()` pour la configuration clef).
 * L'EJB Session Stateless `AddressBookBean` a été créé pour pouvoir accéder aux Entity Beans, mais il n'est terminé car aucune base n'est installée / configurée.
+    * Voir http://www.eclipsetotale.com/articles/Introduction_EJB3_avec_Eclipse.html
+* Configuration Maven pour automatiquement copier l'EAR dans le répertoire `/usr/local/jboss-6.1.0.Final/server/default/deploy/`
 
 
 
 ### Remarques
 
-* `Person` et `Address` (les objets persistés) doivent implémenter `Serializable`.
+* `Person` et `Address` (les objets persistés) doivent implémenter `Serializable` (si utilisés comme Entity Bean et pas seulement serialisés).
 
 
 
@@ -222,3 +225,10 @@ Si vous avez l'erreur :
     me.couvreur.java.jeetuto.ejb.session.HelloSession
 
 Alors il faut ajouter la librairie `jbossall-client.jar` (qui se trouve dans `JBOSS_HOME/client`) au projet IntelliJ `jeetuto-client`.
+
+
+## Maven properties
+
+* http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide
+* http://www.sonatype.com/books/mvnref-book/reference/resource-filtering-sect-properties.html
+

@@ -5,9 +5,6 @@
       <element id="javaee-facet-resources" facet="jeetuto-ear/javaeeApplication/JavaEE" />
       <element id="directory" name="jeetuto-ejb-0.3-SNAPSHOT.jar">
         <element id="artifact" artifact-name="jeetuto-ejb:ejb exploded" />
-        <element id="archive" name="jeetuto-model-0.3-SNAPSHOT.jar">
-          <element id="module-output" name="jeetuto-model" />
-        </element>
       </element>
       <element id="archive" name="jeetuto-model-0.3-SNAPSHOT.jar">
         <element id="module-output" name="jeetuto-model" />

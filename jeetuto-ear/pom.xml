@@ -11,7 +11,6 @@
     <artifactId>jeetuto-ear</artifactId>
     <name>jeetuto-ear</name>
     <packaging>ear</packaging>
-    <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
     <version>0.3-SNAPSHOT</version>
 
     <dependencies>
@@ -25,33 +24,58 @@
 
     <build>
         <plugins>
-                <plugin>
-                    <artifactId>maven-ear-plugin</artifactId>
-                    <version>2.6</version>
-                    <configuration>
-                        <modules>
-                            <ejbModule>
-                                <groupId>me.couvreur.java.jeetuto</groupId>
-                                <artifactId>jeetuto-ejb</artifactId>
-                            </ejbModule>
-                        </modules>
-                    </configuration>
-                </plugin>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <modules>
+                        <ejbModule>
+                            <groupId>me.couvreur.java.jeetuto</groupId>
+                            <artifactId>jeetuto-ejb</artifactId>
+                        </ejbModule>
+                    </modules>
+                </configuration>
+            </plugin>
 
-            <!--            <plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <id>echodir</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                        <configuration>
+                            <tasks>
+                                <echo>>>>>> Artifact: ${project.build.directory}/${project.build.finalName}.${project.packaging}</echo>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jboss-maven-plugin</artifactId>
                 <version>1.5.0</version>
                 <configuration>
-
-                    <jbossHome>/opt/jboss6/server/default/deploy</jbossHome>
-
-                    <jbossHome>/home/varsha/Downloads/jboss-6.0.0.Final/</jbossHome>
+                    <jbossHome>/usr/local/jboss-6.1.0.Final</jbossHome>
                     <serverName>default</serverName>
-                    <fileName>target/MessageBean.jar</fileName>
-                    <path>/UltimateSMS</path>
+                    <fileName>${project.build.directory}/${project.build.finalName}.${project.packaging}</fileName>
                 </configuration>
-            </plugin>-->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <!-- goal>start</goal -->
+                            <goal>hard-deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
