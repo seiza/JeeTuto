@@ -2,7 +2,8 @@
 target
 
 # IntelliJ files
-.idea/
+.idea
+.iml
 
 # Runtime files
 transaction.log
