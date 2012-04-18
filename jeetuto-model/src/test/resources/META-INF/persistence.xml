@@ -10,6 +10,7 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>me.couvreur.java.jeetuto.ejb.entity.model.Person</class>
+        <class>me.couvreur.java.jeetuto.ejb.entity.model.Address</class>
 
         <properties>
             <!-- Scan for annotated classes and Hibernate mapping XML files -->

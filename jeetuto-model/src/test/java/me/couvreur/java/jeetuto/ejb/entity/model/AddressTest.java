@@ -1,6 +1,5 @@
 package me.couvreur.java.jeetuto.ejb.entity.model;
 
-import me.couvreur.java.jeetuto.ejb.entity.model.Person;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
@@ -16,28 +15,28 @@ import static org.junit.Assert.assertNotNull;
  * Date: 17.04.12
  * Time: 18:46
  */
-public class PersonTest {
+public class AddressTest {
 
     @Test
-    public void findPersonWithNameTest() {
-        String jacques = "Jacques";
+    public void findAddressWithCityTest() {
+        String geneva = "Geneva";
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MaBaseDeTestPU");
         EntityManager manager = factory.createEntityManager();
         EntityTransaction transaction = manager.getTransaction();
 
         transaction.begin();
         {
-            Person person = new Person();
-            person.setName(jacques);
-            manager.persist(person);
+            Address address = new Address();
+            address.setCity(geneva);
+            manager.persist(address);
         }
         manager.flush();
         transaction.commit();
 
         {
-            Person person = manager.find(Person.class, 1);
-            assertNotNull(person);
-            assertEquals(jacques, person.getName());
+            Address address = manager.find(Address.class, 1);
+            assertNotNull(address);
+            assertEquals(geneva, address.getCity());
         }
         manager.close();
         factory.close();
