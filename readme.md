@@ -15,7 +15,8 @@ Versions (tags GitHub) :
 
 ### Contenu
 
-Ajout d'un Message Driven Bean (MDB / JMS).
+Ajout d'un Message Driven Bean (MDB / JMS) :
+
 * Dans le package `me.couvreur.java.jeetuto.ejb.mdb`.
 * Le Message Producer et le MDB fonctionnent avec une Queue.
 * Mais impossible de faire fonctionner le Messager/Queue Receiver ;(

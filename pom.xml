@@ -20,6 +20,12 @@
         <project.build.sourceencoding>UTF-8</project.build.sourceencoding>
     </properties>
 
+    <scm>
+        <connection>scm:git:git@github.com:seiza/JeeTuto.git</connection>
+        <url>scm:git:git@github.com:seiza/JeeTut.git</url>
+        <developerConnection>scm:git:git@github.com:seiza/JeeTuto.git</developerConnection>
+    </scm>
+
     <!--repo.maven.apache.org/maven2/-->
 
     <dependencies>
