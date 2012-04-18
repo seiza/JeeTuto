@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: me.couvreur.java.jeetuto:jeetuto-ejb:ejb:0.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/me/couvreur/java/jeetuto/jeetuto-ejb/0.1/jeetuto-ejb-0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/jeetuto-ejb/pom-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/me/couvreur/java/jeetuto/jeetuto-ejb/0.1/jeetuto-ejb-0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/jeetuto-ejb/pom-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/me/couvreur/java/jeetuto/jeetuto-ejb/0.1/jeetuto-ejb-0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

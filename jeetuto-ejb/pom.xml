@@ -7,12 +7,12 @@
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.1</version>
+        <version>0.2</version>
     </parent>
 
     <artifactId>jeetuto-ejb</artifactId>
     <name>jeetuto-ejb</name>
-    <version>0.1</version>
+    <version>${parent.version}</version>
     <packaging>ejb</packaging>
 
     <dependencies>

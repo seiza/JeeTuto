@@ -17,8 +17,14 @@ Versions (tags GitHub) :
 
 Ajout d'un Message Driven Bean (MDB / JMS).
 
-Dans le package `me.couvreur.java.jeetuto.ejb.mdb` et les classes `*EjjloMDB*`.
+Dans le package `me.couvreur.java.jeetuto.ejb.mdb` et les classes `*HelloMDB*`.
 
+
+### Remarques
+
+* Attention, dans JBoss, toutes les destinations de type Queue doivent commencer par `queue/` (voir l'annotation `@MessageDriven/@ActivationConfigProperty` dans la classe `me.couvreur.java.jeetuto.ejb.mdb.HelloMessageListenerMDB`)
+* Attention, dans JBoss, la déclaration des queues se fait dans un fichier `hornetq-jms.xml` (et non pas `jms.xml`) dans le répertoire ressource `META-INF` du module `jeetuto-ejb`
+* Pour la mise à jour du numéro de version, la prochaine fois utiliser `mvn release:update-versions -DautoVersionSubmodules=true` lorsqu'une version est finie (le faire en fin de version 0.2 -> 0.3)
 
 
 

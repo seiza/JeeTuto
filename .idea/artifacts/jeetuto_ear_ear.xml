@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="ear" name="jeetuto-ear:ear">
     <output-path>$PROJECT_DIR$/jeetuto-ear/target</output-path>
-    <root id="archive" name="jeetuto-ear-0.1.ear">
+    <root id="archive" name="jeetuto-ear-0.2.ear">
       <element id="artifact" artifact-name="jeetuto-ear:ear exploded" />
     </root>
   </artifact>
