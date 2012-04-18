@@ -1,20 +1,18 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.2-SNAPSHOT</version>
+        <version>0.2</version>
     </parent>
 
     <artifactId>jeetuto-client</artifactId>
     <name>jeetuto-client</name>
     <packaging>jar</packaging>
     <!--http://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide-->
-    <version>${project.parent.version}</version>
+    <version>0.2</version>
 
     <!-- http://repo.maven.apache.org/maven2/org/jboss/jbossas/jboss-as-client/ -->
     <dependencies>
@@ -45,7 +43,7 @@
     </dependencies>
 
     <build>
-        <plugins></plugins>
+        <plugins />
     </build>
 
 </project>
