@@ -1,5 +1,8 @@
 Projet tutorial visant à mettre en oeuvre les technologies Java EE.
 
+Voir aussi le site web : http://HelloJee.io
+
+
 http://en.wikipedia.org/wiki/Markdown
 
 # Utilisation
