@@ -5,13 +5,13 @@
     <parent>
         <groupId>me.couvreur.java.jeetuto</groupId>
         <artifactId>JeeTuto</artifactId>
-        <version>0.3.1-SNAPSHOT</version>
+        <version>0.3</version>
     </parent>
 
     <artifactId>jeetuto-ear</artifactId>
     <name>jeetuto-ear</name>
     <packaging>ear</packaging>
-    <version>0.3.1-SNAPSHOT</version>
+    <version>0.3</version>
 
     <dependencies>
         <dependency>
@@ -19,12 +19,6 @@
             <artifactId>jeetuto-ejb</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
-        </dependency>
-        <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 

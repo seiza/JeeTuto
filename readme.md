@@ -21,7 +21,53 @@ Versions (tags GitHub) :
 
 * `jeetuto-0.1` : Projet JEE minimaliste avec uniquement un EJB Stateless et un appel depuis une classe Java simple.
 * `JeeTuto-0.2` : Ajout d'un Message Driven Bean.
-* `JeeTuto-0.3` : Ajout d'un Entity Bean (JPA / Hibernate).
+* `JeeTuto-0.3.1` : Ajout d'un Entity Bean (JPA / Hibernate).
+
+
+
+
+## Release 0.3.1
+
+### Contenu
+
+1) Utilisation d'une base de données dans la persistance (JPA / Hibernate) :
+
+* Création d'une branche Git sur le tag `JeeTuto-0.3` et upgrade de version à `JeeTuto-0.3.1` pour travailler.
+* [Configuration de la base de données HSQLDB intégrée à JBoss AS](http://agora.2ia.net/mediawiki/index.php?title=HSQLDB#Version_int.C3.A9gr.C3.A9e_.C3.A0_JBoss_Application_Server) pour ajouter le DataSource `JeeTutoDS` :
+    * Création du fichiers projet `<jeetuto-ejb>/META-INF/jeetuto-ds.xml` pour définir le `local-tx-datasource` (plutôt que dans le fichier `JBOSS_HOME/server/default/deploy/hsqldb-ds.xml`)
+    * Création du fichiers projet `<jeetuto-ejb>/META-INF/jeetuto-jboss-beans.xml` pour définir le `application-policy` (plutôt que dans le fichier `JBOSS_HOME/server/default/conf/login-config.xml`)
+* Refactoring du fichier `<jeetuto-ejb>/META-INF/persistence.xml` (nommage correct du persistence unit et correction de sa configuration)
+* Ajout de la configuration suivante au `pom.xml` du module `jeetuto-ejb` :
+
+    <!-- Dans la balise project/plugins/plugin[artifactId="maven-ejb-plugin"]/configuration -->
+    <archive>
+        <manifest>
+            <addClasspath>true</addClasspath>
+        </manifest>
+    </archive>
+
+* Suppression du fichier `<jeetuto-model>/META-INF/persistence.xml` qui existait à tord et créait des conflit avec celui du module `jeetuto-ejb`.
+* Configuration du plugin Maven `hibernate3-maven-plugin` dans le `pom.xml` du module `jeetuto-model` afin de pouvoir générer le schéma de base de données
+* Correction de la dépendance `hibernate-entitymanager` dans le `pom.xml` du module `jeetuto-model` :
+    * Upgrade de la version utilisée à `3.4.0.GA` pour supprimer des erreurs au runtime liées à des conflits de version sur les dépendances transitives
+    * Changement du `scope` à `provided` également pour éviter des erreurs au runtime liées à des collisions dans les libs utilisées.
+* Ajout de la dépendance à `dom4j` dans le `pom.xml` du module `jeetuto-ear`.
+
+
+2) Création d'un EJB Stateless
+
+* Ajout des annotations `@Stateless` sur la classe `AddressBookBean`
+* Ajout des annotations `@PersistenceContext(unitName="JeeTutoPU")` sur l'attribut membre `AddressBookBean.entityManager` afin de permettre l'injection sans equivoque.
+
+
+3) Création du client
+
+* Création du package `me.couvreur.java.jeetuto.client.entity` dans le module `jeetuto-client`
+* Création de la classe `ClientAddressBookStateless` dedans pour appeler l'EJB Stateless et lui transmettre l'EJB Entity `Person` créé pour le persister.
+
+
+
+### Remarques
 
 
 ## Release 0.3

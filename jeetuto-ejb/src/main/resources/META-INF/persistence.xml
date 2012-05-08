@@ -1,0 +1,43 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+
+    <persistence-unit name="JeeTutoPU" transaction-type="JTA" >
+
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>java:JeeTutoDS</jta-data-source>
+
+        <!-- The provider only needs to be set if you use several JPA providers -->
+        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+
+        <jar-file>jeetuto-model-0.3.1-SNAPSHOT.jar</jar-file>
+
+        <!--<class>me.couvreur.java.jeetuto.ejb.entity.model.Person</class>-->
+        <!--<class>me.couvreur.java.jeetuto.ejb.entity.model.Address</class>-->
+
+        <!--<properties>-->
+            <!--<property name="hibernate.show_sql" value="true"/>-->
+            <!--<property name="hibernate.format_sql" value="true"/>-->
+            <!--<property name="use_sql_comments" value="true"/>-->
+
+            <!--<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>-->
+
+            <!--<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>-->
+            <!--<property name="hibernate.connection.url" value="jdbc:hsqldb:hsql://localhost:1701/jeeTutoDB"/>-->
+            <!--<property name="hibernate.connection.username" value="sa"/>-->
+            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+        <!--</properties>-->
+        <properties>
+            <property name="hibernate.archive.autodetecion" value="class" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <!-- You must have this if you are using JTA and JBoss! -->
+            <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
+        </properties>
+    </persistence-unit>
+</persistence>

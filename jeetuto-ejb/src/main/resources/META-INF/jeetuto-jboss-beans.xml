@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="urn:jboss:bean-deployer:2.0">
+
+    <application-policy xmlns="urn:jboss:security-beans:1.0" name="HsqlDb2Realm">
+        <authentication>
+            <login-module code="org.jboss.resource.security.ConfiguredIdentityLoginModule" flag="required">
+                <module-option name="principal">sa</module-option>
+                <module-option name="userName">sa</module-option>
+                <module-option name="password"></module-option>
+                <module-option name="managedConnectionFactoryName">jboss.jca:service=LocalTxCM,name=JeeTutoDS</module-option>
+            </login-module>
+        </authentication>
+    </application-policy>
+
+</deployment>

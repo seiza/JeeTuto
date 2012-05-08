@@ -1,9 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="ejb-jar" name="jeetuto-ejb:ejb">
     <output-path>$PROJECT_DIR$/jeetuto-ejb/target</output-path>
-    <root id="archive" name="jeetuto-ejb-0.3-SNAPSHOT.jar">
+    <root id="archive" name="jeetuto-ejb-0.3.1-SNAPSHOT.jar">
       <element id="artifact" artifact-name="jeetuto-ejb:ejb exploded" />
-      <element id="archive" name="jeetuto-model-0.3-SNAPSHOT.jar">
+      <element id="archive" name="jeetuto-model-0.3.1-SNAPSHOT.jar">
         <element id="module-output" name="jeetuto-model" />
       </element>
     </root>
